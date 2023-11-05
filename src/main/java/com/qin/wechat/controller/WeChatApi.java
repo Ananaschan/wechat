@@ -32,7 +32,7 @@ public class WeChatApi {
         byte[] digest = instance.digest(sb.toString().getBytes());
         StringBuilder sum = new StringBuilder();
         for (byte b : digest) {
-            sum.append(Integer.toHexString(b>>4&15));
+            sum.append(Integer.toHexString((b>>4)&15));
             sum.append(Integer.toHexString(b&15));
         }
         if (!StringUtils.isEmpty(signature) && signature.equals(sum.toString())){
