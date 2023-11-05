@@ -15,7 +15,7 @@ import java.util.List;
 @CrossOrigin
 @RestController
 public class WeChatApi {
-    @GetMapping("/check")
+    @GetMapping("/")
     public String check(String signature,
                         String timestamp,
                         String nonce,
